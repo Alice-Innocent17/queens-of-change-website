@@ -1,0 +1,927 @@
+html, body{
+    overflow-x: hidden;
+}
+
+html{
+    scroll-behavior: smooth;
+}
+/* RESET */
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* BODY */
+
+body{
+    font-family: 'Poppins', sans-serif;
+    background-color: #f4f7f6;
+}
+
+/* NAVBAR */
+
+.navbar{
+    width: 100%;
+    height: 80px;
+    background-color: white;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 8%;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+    backdrop-filter: blur(50px);
+    background: rgba(255,255,255,0.85);
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000;
+}
+
+/* LOGO */
+
+.logo{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 24px;
+    font-weight: 700;
+    color: #47837e;
+}
+
+/*LOGO IMAGE*/
+
+.logo img{
+    width: 45px;
+    height: 45px;
+    object-fit: cover;
+}
+
+/* NAV LINKS */
+
+.nav-links{
+    display: flex;
+    list-style: none;
+    gap: 30px;
+}
+
+.nav-links a{
+    text-decoration: none;
+    color: #333;
+    font-size: 16px;
+    font-weight: 500;
+
+    transition: 0.3s;
+}
+
+/* HOVER EFFECT */
+
+.nav-links a:hover{
+    color: #47837e;
+}
+
+/* DARK MODE BUTTON */
+
+.dark-btn{
+    padding: 10px 14px;
+    border: none;
+    border-radius: 50%;
+    background-color: #47837e
+    color white;
+    cursor: pointer;
+
+    font-size: 16px;
+
+    transition: 0.3s;
+}
+
+.dark-btn:hover{
+    transform: scale(1.1);
+    background-color: #356661;
+}
+
+/* HERO SECTION */
+
+.hero{
+    width: 100%;
+    min-height: 100vh;
+    margin-top: 80px;
+    background:
+    linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.4)),
+    url('https://images.unsplash.com/photo-1529156069898-49953e39b3ac?q=80&w=1200&auto=format&fit=crop');
+
+    background-size: cover;
+    background-position: center;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    text-align: center;
+    padding: 20px;
+}
+
+/* HERO CONTENT */
+
+.hero-content{
+    width: 100%;
+    max-width: 700px;
+    color: white;
+    animation: fadeIn 1.5s ease;
+}
+
+/* HERO HEADING */
+
+.hero-content h1{
+    font-size: 55px;
+    margin-bottom: 20px;
+    line-height: 1.2;
+}
+
+/* HERO PARAGRAPH */
+
+.hero-content p{
+    font-size: 18px;
+    margin-bottom: 30px;
+    line-height: 1.8;
+}
+
+/* HERO BUTTON */
+
+.hero-btn{
+    padding: 14px 35px;
+    border: none;
+    border-radius: 30px;
+
+    background-color: #47837E;
+    color: white;
+
+    font-size: 16px;
+    font-weight: 600;
+
+    cursor: pointer;
+
+    transition: 0.3s;
+}
+
+/* BUTTON HOVER */
+
+.hero-btn:hover{
+    background-color: #356661;
+    transform: translateY(-3px);
+}
+
+/* TYPING EFFECT */
+
+#typing-text{
+    border-right: 4px solid white;
+
+    padding-right: 5px;
+
+    animation: blink 0.7s infinite;
+}
+
+/* CURSOR BLINK */
+
+@keyframes blink{
+
+    50%{
+        border-color: transparent;
+    }
+
+}
+
+/* SIMPLE ANIMATION */
+
+@keyframes fadeIn{
+
+    from{
+        opacity: 0;
+        transform: translateY(30px);
+    }
+
+    to{
+        opacity: 1;
+        transform: translateY(0);
+    }
+
+}
+
+/* RESPONSIVE DESIGN */
+
+@media(max-width:768px){
+
+    .hero-content h1{
+        font-size: 40px;
+    }
+
+    .hero-content p{
+        font-size: 16px;
+    }
+
+}
+
+/* ABOUT SECTION */
+
+.about{
+    width: 100%;
+    padding: 100px 10%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 60px;
+    background-color: white;
+    flex-wrap: wrap;
+}
+
+/* ABOUT IMAGE */
+
+.about-image{
+    flex: 1.2;
+    min-width: 350px;
+}
+
+.about-image img{
+    width: 100%;
+    height: 420px;
+    object-fit: cover;
+    border-radius: 20px;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+    transition: 0.4s;
+}
+
+/* IMAGE HOVER */
+
+.about-image img:hover{
+    transform: scale(1.03);
+}
+
+/* ABOUT CONTENT */
+
+.about-content{
+    flex: 1;
+    min-width: 300px;
+}
+
+/* ABOUT HEADING */
+
+.about-content h2{
+    font-size: 42px;
+    color: #47837E;
+
+    margin-bottom: 20px;
+}
+
+/* ABOUT TEXT */
+
+.about-content p{
+    font-size: 17px;
+    color: #444;
+
+    line-height: 1.8;
+
+    margin-bottom: 20px;
+}
+
+/* ABOUT BUTTON */
+
+.about-btn{
+    padding: 14px 30px;
+
+    border: none;
+    border-radius: 30px;
+
+    background-color: #47837E;
+    color: white;
+
+    font-size: 16px;
+    font-weight: 600;
+
+    cursor: pointer;
+
+    transition: 0.3s;
+}
+
+/* BUTTON HOVER */
+
+.about-btn:hover{
+    background-color: #356661;
+
+    transform: translateY(-3px);
+}
+
+/* IMPACT SECTION */
+
+.impact{
+    width: 100%;
+
+    padding: 100px 10%;
+
+    background-color: #F4F7F6;
+
+    text-align: center;
+}
+
+/* TITLE */
+
+.impact-title{
+    margin-bottom: 60px;
+}
+
+.impact-title h2{
+    font-size: 42px;
+    color: #47837E;
+
+    margin-bottom: 15px;
+}
+
+.impact-title p{
+    font-size: 17px;
+    color: #555;
+
+    max-width: 700px;
+    margin: auto;
+
+    line-height: 1.8;
+}
+
+/* CARD CONTAINER */
+
+.impact-container{
+    display: flex;
+
+    justify-content: center;
+    gap: 30px;
+
+    flex-wrap: wrap;
+}
+
+/* IMPACT CARD */
+
+.impact-card{
+    background-color: white;
+
+    width: 280px;
+
+    padding: 40px 30px;
+
+    border-radius: 20px;
+    border-top: 5px solid #47837E;
+
+    box-shadow: 0 4px 20px rgba(0,0,0,0.08);
+
+    transition: 0.4s;
+}
+
+/* CARD HOVER */
+
+.impact-card:hover{
+    transform: translateY(-10px);
+
+    box-shadow: 0 8px 25px rgba(0,0,0,0.12);
+}
+
+/* CARD NUMBER */
+
+.impact-card h1{
+    font-size: 52px;
+
+    color: #47837E;
+
+    margin-bottom: 15px;
+}
+
+/* CARD TEXT */
+
+.impact-card p{
+    font-size: 18px;
+
+    color: #444;
+}
+
+/* GALLERY SECTION */
+
+.gallery{
+    width: 100%;
+    padding: 100px 10%;
+    background-color: white;
+}
+
+/* HEADER */
+
+.gallery-header{
+    margin-bottom: 50px;
+}
+
+/* TEXT */
+
+.gallery-text h2{
+    font-size: 42px;
+    color: #47837E;
+    margin-bottom: 15px;
+}
+
+.gallery-text p{
+    font-size: 17px;
+    color: #555;
+    line-height: 1.8;
+    max-width: 600px;
+}
+
+/* SLIDER CONTAINER */
+
+.slider-container{
+    position: relative;
+
+    display: flex;
+    align-items: center;
+}
+
+/* SLIDER */
+
+.slider{
+    display: flex;
+
+    gap: 25px;
+
+    overflow-x: auto;
+
+    scroll-behavior: smooth;
+
+    scrollbar-width: none;
+}
+
+/* HIDE SCROLLBAR */
+
+.slider::-webkit-scrollbar{
+    display: none;
+}
+
+/* IMAGES */
+
+.slider img{
+    width: 320px;
+    height: 420px;
+
+    object-fit: cover;
+
+    border-radius: 25px;
+
+    flex-shrink: 0;
+
+    box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+
+    transition: 0.4s;
+}
+
+/* HOVER */
+
+.slider img:hover{
+    transform: scale(1.03);
+}
+
+/* BUTTONS */
+
+.slide-btn{
+    position: absolute;
+
+    width: 50px;
+    height: 50px;
+
+    border: none;
+    border-radius: 50%;
+
+    background-color: white;
+
+    box-shadow: 0 4px 15px rgba(0,0,0,0.15);
+
+    cursor: pointer;
+
+    font-size: 24px;
+
+    z-index: 10;
+
+    transition: 0.3s;
+}
+
+/* HOVER */
+
+.slide-btn:hover{
+    background-color: #47837E;
+    color: white;
+}
+
+/* LEFT BUTTON */
+
+.prev{
+    left: -25px;
+}
+
+/* RIGHT BUTTON */
+
+.next{
+    right: -25px;
+}
+
+/* DONATION SECTION */
+
+.donation{
+    width: 100%;
+
+    padding: 100px 10%;
+
+    background-color: #F4F7F6;
+
+    display: flex;
+
+    justify-content: space-between;
+    align-items: center;
+
+    gap: 60px;
+
+    flex-wrap: wrap;
+}
+
+/* LEFT CONTENT */
+
+.donation-content{
+    flex: 1;
+
+    min-width: 300px;
+}
+
+/* HEADING */
+
+.donation-content h2{
+    font-size: 42px;
+
+    color: #47837E;
+
+    margin-bottom: 20px;
+}
+
+/* TEXT */
+
+.donation-content p{
+    font-size: 17px;
+
+    color: #555;
+
+    line-height: 1.8;
+
+    margin-bottom: 30px;
+}
+
+/* BUTTON */
+
+.donate-btn{
+    padding: 14px 35px;
+
+    border: none;
+    border-radius: 35px;
+
+    background-color: #47837E;
+
+    color: white;
+
+    font-size: 16px;
+    font-weight: 600;
+
+    cursor: pointer;
+
+    transition: 0.3s;
+}
+
+/* BUTTON HOVER */
+
+.donate-btn:hover{
+    background-color: #356661;
+
+    transform: translateY(-3px);
+}
+
+/* DONATION CARDS */
+
+.donation-cards{
+    flex: 1;
+
+    display: grid;
+
+    grid-template-columns: repeat(2, 1fr);
+
+    gap: 20px;
+
+    min-width: 300px;
+}
+
+/* CARD */
+
+.donate-card{
+    background-color: white;
+
+    padding: 40px;
+
+    border-radius: 20px;
+
+    text-align: center;
+
+    font-size: 24px;
+    font-weight: 600;
+
+    color: #47837E;
+
+    box-shadow: 0 4px 20px rgba(0,0,0,0.08);
+
+    transition: 0.3s;
+
+    cursor: pointer;
+}
+
+/* HOVER */
+
+.donate-card:hover{
+    background-color: #47837E;
+
+    color: white;
+
+    transform: translateY(-5px);
+}
+
+/* FOOTER */
+
+.footer{
+    background-color: #1F2937;
+
+    color: white;
+
+    padding-top: 80px;
+}
+
+/* CONTAINER */
+
+.footer-container{
+    width: 100%;
+
+    padding: 0 10% 50px;
+
+    display: flex;
+
+    justify-content: space-between;
+
+    gap: 50px;
+
+    flex-wrap: wrap;
+}
+
+/* BOX */
+
+.footer-box{
+    flex: 1;
+
+    min-width: 250px;
+}
+
+/* HEADINGS */
+
+.footer-box h2,
+.footer-box h3{
+    color: #7FB7AD;
+
+    margin-bottom: 20px;
+}
+
+/* TEXT */
+
+.footer-box p{
+    line-height: 1.8;
+
+    color: #ddd;
+}
+
+/* LINKS */
+
+.footer-box ul{
+    list-style: none;
+}
+
+.footer-box ul li{
+    margin-bottom: 12px;
+}
+
+.footer-box ul li a{
+    text-decoration: none;
+
+    color: #ddd;
+
+    transition: 0.3s;
+}
+
+/* HOVER */
+
+.footer-box ul li a:hover{
+    color: #7FB7AD;
+}
+
+/* BOTTOM */
+
+.footer-bottom{
+    text-align: center;
+
+    padding: 25px;
+
+    border-top: 1px solid rgba(255,255,255,0.1);
+
+    color: #bbb;
+}
+
+/* RESPONSIVE DESIGN */
+
+@media(max-width: 768px){
+
+    /* NAVBAR */
+
+    .navbar{
+        padding: 20px 5%;
+    }
+
+    .nav-links{
+        gap: 15px;
+    }
+
+    .logo{
+        font-size: 16px;
+    }
+
+    /* HERO */
+
+    .hero-content h1{
+        font-size: 40px;
+    }
+
+    .hero-content p{
+        font-size: 16px;
+    }
+
+    /* ABOUT */
+
+    .about{
+        padding: 80px 5%;
+    }
+
+    .about-content h2{
+        font-size: 34px;
+    }
+
+    /* IMPACT */
+
+    .impact{
+        padding: 80px 5%;
+    }
+
+    /* GALLERY */
+
+    .gallery{
+        padding: 80px 5%;
+    }
+
+    .slider img{
+        width: 260px;
+        height: 350px;
+    }
+
+    /* DONATION */
+
+    .donation{
+        padding: 80px 5%;
+    }
+
+    /* FOOTER */
+
+    .footer-container{
+        padding: 0 5% 50px;
+    }
+
+}
+
+/* =========================
+   SCROLL REVEAL
+========================= */
+
+.hidden{
+
+    opacity: 0;
+
+    transform: translateY(80px);
+
+    transition: all 1s ease;
+
+}
+.hidden-left{
+    opacity: 0;
+    transform: translateX(-100px);
+    transition: all 1s;
+}
+
+.hidden-right{
+    opacity: 0;
+    transform: translateX(100px);
+    transition: all 1s;
+}
+/* SHOW ANIMATION */
+
+.show{
+
+    opacity: 1;
+
+    transform: translateY(0);
+
+}
+
+/* =========================
+   DARK MODE
+========================= */
+
+.dark-mode{
+    background-color: #121212;
+}
+
+/* NAVBAR */
+
+.dark-mode .navbar{
+    background-color: #1F2937;
+}
+
+/* LOGO */
+
+.dark-mode .logo{
+    color: #7FB7AD;
+}
+
+/* NAV LINKS */
+
+.dark-mode .nav-links a{
+    color: white;
+}
+
+/* HERO */
+
+.dark-mode .hero{
+    background-blend-mode: darken;
+}
+
+/* ABOUT SECTION */
+
+.dark-mode .about{
+    background-color: #181818;
+}
+
+/* IMPACT SECTION */
+
+.dark-mode .impact{
+    background-color: #121212;
+}
+
+/* GALLERY */
+
+.dark-mode .gallery{
+    background-color: #181818;
+}
+
+/* DONATION */
+
+.dark-mode .donation{
+    background-color: #121212;
+}
+
+/* CARDS */
+
+.dark-mode .impact-card,
+.dark-mode .donate-card{
+    background-color: #222;
+}
+
+/* FOOTER */
+
+.dark-mode .footer{
+    background-color: #0D1117;
+}
+
+/* TEXT COLORS */
+
+.dark-mode h1,
+.dark-mode h2,
+.dark-mode h3,
+.dark-mode p,
+.dark-mode a{
+    color: white;
+}
+
+/* BUTTON */
+
+.dark-mode .hero-btn,
+.dark-mode .about-btn,
+.dark-mode .donate-btn{
+    background-color: #47837E;
+}
